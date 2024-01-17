@@ -1,5 +1,6 @@
 package PageObjects;
 
+import Helper.Generic.GenericHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 
     private final WebDriver driver;
+    private final GenericHelper genericHelper;
 
     // Page Factory elements
     @FindBy(id = "")
@@ -22,24 +24,20 @@ public class HomePage {
     // Constructor - initialize elements with Page Factory
     public HomePage(WebDriver driver) {
         this.driver = driver;
+        this.genericHelper = new GenericHelper(driver);
         PageFactory.initElements(driver, this);
     }
 
     // Method to run a function
     public void accessLoginPage(){
-        loginPageButton.click();
+        genericHelper.clickElement(loginPageButton);
     }
 
     public void accessSignUpPage(){
-        signUpPageButton.click();
+        genericHelper.clickElement(signUpPageButton);
     }
-    /*public void toggleButton(String toggleStatus) {
-        boolean isOn = toggleStatus.equalsIgnoreCase("ON");
-        boolean currentState = toggleButton.isSelected();
 
-        if (isOn != currentState) {
-            toggleButton.click();
-        }
-    }*/
-
+    public void enterSearchKeyword(String searchKeyword){
+        genericHelper.sendKeysToElement(searchBar,searchKeyword);
+    }
 }

@@ -1,4 +1,4 @@
-package Helper;
+package Helper.Alert;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;

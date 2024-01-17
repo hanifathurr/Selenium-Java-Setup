@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.time.Duration;
 
-public class HookSetup {
+public class HooksSetup {
     private static WebDriver driver;
         @Before
         public void setup() {

@@ -1,7 +1,8 @@
-package Helper;
+package Helper.Browser;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.LinkedList;
 import java.util.Set;
@@ -57,8 +58,8 @@ public class BrowserHelper{
         switchToParentWindow();
     }
 
-    public void switchToFrame(By frameLocator) {
-        driver.switchTo().frame(driver.findElement(frameLocator));
+    public void switchToFrame(WebElement element) {
+        driver.switchTo().frame(element);
     }
 }
 
