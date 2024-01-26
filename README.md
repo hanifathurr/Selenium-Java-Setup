@@ -11,7 +11,6 @@ Welcome to a versatile Selenium Java project skeleton, meticulously crafted to e
 - **Test Data Management**: Offers a structure for managing test data using properties files.
 - **DriverManager**: Simplifies WebDriver setup and browser management.
 - **Cucumber Integration**: Facilitates Behavior-Driven Development (BDD) using Cucumber for creating test scenarios.
-- **Allure Reporting**: Generates detailed reports via Allure framework for test execution analysis.
 
 ### Installation Guide
 
