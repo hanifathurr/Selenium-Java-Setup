@@ -32,24 +32,20 @@ public class AlertHelper {
     }
 
     public String getAlertText() {
-        Alert alert = waitForAlert();
-        return alert.getText();
+        return waitForAlert().getText();
     }
 
     public void acceptAlert() {
-        Alert alert = waitForAlert();
-        alert.accept();
+        waitForAlert().accept();
     }
 
     public void dismissAlert() {
-        Alert alert = waitForAlert();
-        alert.dismiss();
+        waitForAlert().dismiss();
     }
 
     public void sendKeysToAlert(String keysToSend) {
-        Alert alert = waitForAlert();
-        alert.sendKeys(keysToSend);
-        alert.accept();
+        waitForAlert().sendKeys(keysToSend);
+        waitForAlert().accept();
     }
 
     public void switchToAlert() {

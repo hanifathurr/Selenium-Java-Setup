@@ -28,9 +28,8 @@ public class GenericHelper {
     }
 
     public void sendKeysToElement(WebElement locator, String text) {
-        WebElement element = getElement(locator);
-        element.clear();
-        element.sendKeys(text);
+        getElement(locator).clear();
+        getElement(locator).sendKeys(text);
     }
     public boolean isElementPresent(WebElement element) {
         return element.isDisplayed();

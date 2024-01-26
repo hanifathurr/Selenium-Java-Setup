@@ -1,4 +1,4 @@
-package Utilities;
+package Utilities.DriverManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
