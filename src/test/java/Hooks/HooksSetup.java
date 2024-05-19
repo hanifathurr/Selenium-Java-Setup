@@ -10,14 +10,15 @@ public class HooksSetup {
     private static WebDriver driver;
         @Before
         public void setup() {
-            GetDriverManager.getDriver("chrome");
+            GetDriverManager.getDriver("edge");
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-            driver.navigate();
+            driver.manage().window().maximize();
+            driver.get("https://www.linkedin.com/feed/");
         }
 
         @After
-        public void teardown() {
+        public void tearDown() {
             GetDriverManager.quitDriver();
         }
     }
